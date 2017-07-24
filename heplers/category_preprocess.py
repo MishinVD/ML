@@ -124,7 +124,7 @@ class DifferenceCountsProcessor:
         self._preproc = BaseCategoryProcessor('difference_in_counts', cv, shuffle, random_state, kf)
 
     def fit_transform(self, X, y, column_by, verbose=False, split_by=None, **fit_params):
-        return self._preproc.fit_transform(X_train, y_train, X_target, column_by=column_by,
+        return self._preproc.fit_transform(X, y, column_by=column_by,
                                            verbose=verbose, split_by=split_by, **fit_params)
 
     def transform(self, X_train, y_train, X_target, column_by):
